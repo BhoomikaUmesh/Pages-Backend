@@ -40,6 +40,8 @@ ALLOWED_HOSTS = [
     "127.0.0.1",
 ]
 
+if os.environ.get("RENDER_EXTERNAL_HOSTNAME"):
+    ALLOWED_HOSTS.append(os.environ["RENDER_EXTERNAL_HOSTNAME"])
 
 # Application definition
 
